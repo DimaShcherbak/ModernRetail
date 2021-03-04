@@ -44,15 +44,12 @@ class AddFreeProductProductAttribute implements DataPatchInterface, PatchReverta
         $this->moduleDataSetup->getConnection()->startSetup();
         /** @var EavSetup $eavSetup */
         $eavSetup = $this->eavSetupFactory->create(['setup' => $this->moduleDataSetup]);
-        if(!$eavSetup->getAttributeId(\Magento\Catalog\Model\Product::ENTITY, 'free_product')) {
-            $eavSetup->removeAttribute(\Magento\Catalog\Model\Product::ENTITY, 'free_product');
-        }
         $eavSetup->addAttribute(
             \Magento\Catalog\Model\Product::ENTITY,
             'free_product',
             [
                 'type' => 'int',
-                'label' => 'Free Product1',
+                'label' => 'Free Product',
                 'input' => 'boolean',
                 'source' => '',
                 'frontend' => '',
