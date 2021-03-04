@@ -1,0 +1,22 @@
+{
+    "name": "modernretail/module-freeproduct",
+    "description": "",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "ModernR",
+            "email": "test@test"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "ModernRetail\\FreeProduct\\": ""
+        }
+    }
+}

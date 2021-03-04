@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+
+    <event name="checkout_cart_product_add_after">
+        <observer name="gift_product" instance="ModernRetail\FreeProduct\Observer\AddGiftProduct"/>
+    </event>
+
+    <event name="sales_quote_remove_item">
+        <observer name="gift_product" instance="ModernRetail\FreeProduct\Observer\DelGiftProduct"/>
+    </event>
+
+    <event name="checkout_cart_update_items_after">
+        <observer name="gift_product_update" instance="ModernRetail\FreeProduct\Observer\UpdateGiftProduct"/>
+    </event>
+
+</config>
